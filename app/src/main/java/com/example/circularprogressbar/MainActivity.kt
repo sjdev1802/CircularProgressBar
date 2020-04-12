@@ -17,11 +17,12 @@ class MainActivity : AppCompatActivity() {
         val animation = CircleAngleAnimation(binding.circle)
 
         binding.animateBtn.setOnClickListener {
-            animation.setAngle(getAngle())
-            animation.duration = 1000
-            circle.startAnimation(animation)
+            animation.apply {
+                setAngle(getAngle())
+                duration = 1000
+                circle.startAnimation(this)
+            }
         }
-
     }
 
     private fun getAngle() = try {

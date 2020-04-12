@@ -26,9 +26,9 @@ class CircularAnimationView @JvmOverloads constructor(
 
     private val rect =
         RectF(
-            strokeWidthReq,
+            2*strokeWidthReq,
             strokeWidthReq * 2,
-            padding,
+            padding + strokeWidthReq,
             padding + strokeWidthReq
         )
 
